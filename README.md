@@ -20,3 +20,6 @@ TODO LIST
 4 - Perform actuations in Gpio's pin's
 5 - Read Values from Gpio pin
 6 - Learning English ^^
+7 - Threads process
+
+
