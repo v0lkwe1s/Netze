@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-private xmlns="http://www.netbeans.org/ns/project-private/1">
+    <data xmlns="http://www.netbeans.org/ns/make-project-private/1">
+        <activeConfTypeElem>1</activeConfTypeElem>
+        <activeConfIndexElem>0</activeConfIndexElem>
+    </data>
+    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
+    <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
+        <group>
+            <file>file:/home/Netze/netze/mSocket.h</file>
+            <file>file:/home/Netze/netze/Pin.cpp</file>
+            <file>file:/home/Netze/netze/board.cpp</file>
+            <file>file:/home/Netze/netze/strLib.h</file>
+            <file>file:/home/Netze/netze/RaspberryPi.h</file>
+            <file>file:/home/Netze/netze/strLib.cpp</file>
+            <file>file:/home/Netze/netze/RaspberryPi.cpp</file>
+            <file>file:/home/Netze/netze/clientSocket.h</file>
+            <file>file:/home/Netze/netze/serverSocket.h</file>
+            <file>file:/home/Netze/netze/hummingBoardI2Ex.cpp</file>
+            <file>file:/home/Netze/netze/serverSocket.cpp</file>
+            <file>file:/home/Netze/netze/board.h</file>
+            <file>file:/home/Netze/netze/main.cpp</file>
+            <file>file:/home/Netze/netze/clientSocket.cpp</file>
+            <file>file:/home/Netze/netze/Pin.h</file>
+            <file>file:/home/Netze/netze/mSocket.cpp</file>
+            <file>file:/home/Netze/netze/PracticalSocket.cpp</file>
+        </group>
+    </open-files>
+</project-private>
