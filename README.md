@@ -1,10 +1,6 @@
-# Netze
+# Netze -- C++ socket to perform actuations on embedded devices.
 
-This project uses C++ socket to perform actuations on plates like Raspberry Pi, 
-HummingBoard, Intel Galileo/Edison and others.
-
-
-
+This project aims use of embedded devices remotely,using Sockets for comunication between Application and device,  in order to make the device transparent to the application , making it easy to implement and expanding the possibilities of development .
 
 TODO LIST
 1 - Create Socket server
