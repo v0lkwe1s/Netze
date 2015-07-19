@@ -20,37 +20,15 @@ board::~board() {
 void board::getBoard(string board) {
     
     if (strcmp(board.c_str(), "hummingboard-i2ex") == 0) {
-        //create instance of Hummingboard class
         hummingBoardI2Ex hummingBoard;
         hummingBoard.set();
-        
-        //create a vector of class Pin 
-        vector<Pin> pins;
-        //get board pins
-        pins = hummingBoard.getPins();
-
-        //print in console pins with respective types
-        for (int i = 0; i < pins.size(); i++) {
-            cout << "GPIO " << pins[i].GetNGpio() << "\t";
-            cout << "PinHeader " << pins[i].GetNPin() << "\t";
-            cout << "PinType " << pins[i].GetNType() << endl;
-        }
+        this->setPins(hummingBoard.getPins());
     }
     //for all is the same, only instancing other boards
     if (strcmp(board.c_str(), "RaspberryPi") == 0) {
-
         RaspberryPi raspberry;
         raspberry.set();
-
-        vector<Pin> pins;
-
-        pins = raspberry.getPins();
-
-        for (int i = 0; i < pins.size(); i++) {
-            cout << "GPIO " << pins[i].GetNGpio() << "\t";
-            cout << "PinHeader " << pins[i].GetNPin() << "\t";
-            cout << "PinType " << pins[i].GetNType() << endl;
-        }
+        this->setPins(raspberry.getPins());
     }
 }
 

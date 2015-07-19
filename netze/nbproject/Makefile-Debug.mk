@@ -37,6 +37,7 @@ OBJECTDIR=${CND_BUILDDIR}/${CND_CONF}/${CND_PLATFORM}
 OBJECTFILES= \
 	${OBJECTDIR}/_ext/1147965664/Pin.o \
 	${OBJECTDIR}/_ext/1147965664/RaspberryPi.o \
+	${OBJECTDIR}/_ext/1147965664/intelGalileo.o \
 	${OBJECTDIR}/PracticalSocket.o \
 	${OBJECTDIR}/board.o \
 	${OBJECTDIR}/clientSocket.o \
@@ -80,6 +81,11 @@ ${OBJECTDIR}/_ext/1147965664/RaspberryPi.o: /home/Netze/netze/RaspberryPi.cpp
 	${MKDIR} -p ${OBJECTDIR}/_ext/1147965664
 	${RM} "$@.d"
 	$(COMPILE.cc) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/_ext/1147965664/RaspberryPi.o /home/Netze/netze/RaspberryPi.cpp
+
+${OBJECTDIR}/_ext/1147965664/intelGalileo.o: /home/Netze/netze/intelGalileo.cpp 
+	${MKDIR} -p ${OBJECTDIR}/_ext/1147965664
+	${RM} "$@.d"
+	$(COMPILE.cc) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/_ext/1147965664/intelGalileo.o /home/Netze/netze/intelGalileo.cpp
 
 ${OBJECTDIR}/PracticalSocket.o: PracticalSocket.cpp 
 	${MKDIR} -p ${OBJECTDIR}

@@ -19,14 +19,25 @@
 
 class board {
 public:
-    board();
-    board(const board& orig);
-    virtual ~board();
-    
-    void getBoard(string board);
-    
-private:
+	board();
+	board(const board& orig);
+	virtual ~board();
 
+	void getBoard(string board);
+
+	vector<Pin> getPins() const
+	{
+		return pins;
+	}
+
+	void setPins(vector<Pin> pins)
+	{
+		this->pins = pins;
+	}
+
+private:
+	vector<Pin> pins;
+	
 };
 
 #endif	/* BOARD_H */

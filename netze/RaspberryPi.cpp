@@ -11,7 +11,7 @@ RaspberryPi::RaspberryPi() {
 }
 
 void RaspberryPi::set() {
-    for (int i = 0; i < 26; i++) {
+    for (int i = 1; i <= 26; i++) {
         switch (i) {
             case 1:
                 type = "3.3V";
@@ -45,7 +45,7 @@ void RaspberryPi::set() {
                 break;
             case 7:
                 type = "GPIO";
-                gpio = "1";
+                gpio = "4";
                 pin = s.intToStr(i);
                 break;
             case 8:
@@ -65,17 +65,17 @@ void RaspberryPi::set() {
                 break;
             case 11:
                 type = "GPIO";
-                gpio = "73";
+                gpio = "17";
                 pin = s.intToStr(i);
                 break;
             case 12:
-                type = "GPIO";
-                gpio = "72";
+                type = "GPIO"; //pwm
+                gpio = "18";
                 pin = s.intToStr(i);
                 break;
             case 13:
                 type = "GPIO";
-                gpio = "71";
+                gpio = "27";
                 pin = s.intToStr(i);
                 break;
             case 14:
@@ -85,12 +85,12 @@ void RaspberryPi::set() {
                 break;
             case 15:
                 type = "GPIO";
-                gpio = "70";
+                gpio = "22";
                 pin = s.intToStr(i);
                 break;
             case 16:
                 type = "GPIO";
-                gpio = "194";
+                gpio = "23";
                 pin = s.intToStr(i);
                 break;
             case 17:
@@ -100,7 +100,7 @@ void RaspberryPi::set() {
                 break;
             case 18:
                 type = "GPIO";
-                gpio = "195";
+                gpio = "24";
                 pin = s.intToStr(i);
                 break;
             case 19:
@@ -120,7 +120,7 @@ void RaspberryPi::set() {
                 break;
             case 22:
                 type = "GPIO";
-                gpio = "67";
+                gpio = "25";
                 pin = s.intToStr(i);
                 break;
             case 23:

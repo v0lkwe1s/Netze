@@ -5,8 +5,11 @@
  */
 package com.netzeapp.screens;
 
+import com.netzeapp.board.BoardPins;
 import com.netzeapp.socket.socketClient;
+import javax.swing.JLabel;
 import javax.swing.JOptionPane;
+import javax.swing.JToggleButton;
 
 /**
  *
@@ -38,6 +41,11 @@ public class fMain extends javax.swing.JFrame {
         tfComm = new javax.swing.JTextField();
         btSystem = new javax.swing.JButton();
         btGpio = new javax.swing.JButton();
+        btGetHummingBoard = new javax.swing.JButton();
+        jLabel3 = new javax.swing.JLabel();
+        lbPortas = new javax.swing.JLabel();
+        jButton1 = new javax.swing.JButton();
+        btGetRaspberryPi = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -81,6 +89,31 @@ public class fMain extends javax.swing.JFrame {
             }
         });
 
+        btGetHummingBoard.setText("GetHummingBoard");
+        btGetHummingBoard.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btGetHummingBoardActionPerformed(evt);
+            }
+        });
+
+        jLabel3.setText("Portas");
+
+        lbPortas.setText("Selecione a placa!");
+
+        jButton1.setText("PerformAct Pin 7");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+
+        btGetRaspberryPi.setText("GetRaspberryPI");
+        btGetRaspberryPi.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btGetRaspberryPiActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -92,17 +125,26 @@ public class fMain extends javax.swing.JFrame {
                     .addComponent(tfComm)
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(tfHost, javax.swing.GroupLayout.PREFERRED_SIZE, 185, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel1))
-                        .addGap(18, 18, 18)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel2)
-                            .addComponent(tfPort, javax.swing.GroupLayout.PREFERRED_SIZE, 59, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(layout.createSequentialGroup()
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(tfHost, javax.swing.GroupLayout.PREFERRED_SIZE, 185, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jLabel1))
+                                .addGap(18, 18, 18)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jLabel2)
+                                    .addComponent(tfPort, javax.swing.GroupLayout.PREFERRED_SIZE, 59, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addComponent(jLabel3)
+                            .addComponent(lbPortas))
                         .addGap(0, 0, Short.MAX_VALUE))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addComponent(btSystem, javax.swing.GroupLayout.PREFERRED_SIZE, 270, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 31, Short.MAX_VALUE)
-                        .addComponent(btGpio, javax.swing.GroupLayout.PREFERRED_SIZE, 270, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                            .addComponent(btGetRaspberryPi, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(btGetHummingBoard, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(btSystem, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 270, Short.MAX_VALUE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(btGpio, javax.swing.GroupLayout.DEFAULT_SIZE, 270, Short.MAX_VALUE)
+                            .addComponent(jButton1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
                 .addContainerGap())
         );
         layout.setVerticalGroup(
@@ -124,7 +166,17 @@ public class fMain extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(btGpio)
                     .addComponent(btSystem))
-                .addContainerGap(130, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btGetHummingBoard)
+                    .addComponent(jButton1))
+                .addGap(10, 10, 10)
+                .addComponent(btGetRaspberryPi)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jLabel3)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(lbPortas)
+                .addContainerGap(233, Short.MAX_VALUE))
         );
 
         pack();
@@ -154,6 +206,21 @@ public class fMain extends javax.swing.JFrame {
         socketClient client = new socketClient(tfHost.getText(), Integer.valueOf(tfPort.getText()));
         client.send("system|nautilus");
     }//GEN-LAST:event_btSystemActionPerformed
+
+    private void btGetHummingBoardActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btGetHummingBoardActionPerformed
+        socketClient client = new socketClient(tfHost.getText(), Integer.valueOf(tfPort.getText()));
+        client.send("getBoard|hummingboard-i2ex");
+    }//GEN-LAST:event_btGetHummingBoardActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        socketClient client = new socketClient(tfHost.getText(), Integer.valueOf(tfPort.getText()));
+        client.send("performAct|out|7|1");
+    }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void btGetRaspberryPiActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btGetRaspberryPiActionPerformed
+        socketClient client = new socketClient(tfHost.getText(), Integer.valueOf(tfPort.getText()));
+        client.send("getBoard|RaspberryPi");
+    }//GEN-LAST:event_btGetRaspberryPiActionPerformed
 
     /**
      * @param args the command line arguments
@@ -190,12 +257,21 @@ public class fMain extends javax.swing.JFrame {
         });
     }
 
+    public void setLbPortas(JLabel lbPortas) {
+        this.lbPortas = lbPortas;
+    }
+
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btGetHummingBoard;
+    private javax.swing.JButton btGetRaspberryPi;
     private javax.swing.JButton btGpio;
     private javax.swing.JButton btSystem;
     private javax.swing.JButton btnConnect;
+    private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel lbPortas;
     private javax.swing.JTextField tfComm;
     private javax.swing.JTextField tfHost;
     private javax.swing.JTextField tfPort;

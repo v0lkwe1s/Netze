@@ -21,13 +21,12 @@ using namespace std;
 
 int main(int argc, char** argv) {
     
-    board b;
-    b.getBoard("RaspberryPi");
+    
     serverSocket s;
     
     s.setPort(45455);
     s.init();
-   
+    
     
     
     return 0;
