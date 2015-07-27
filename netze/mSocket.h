@@ -21,21 +21,18 @@
 #define	MSOCKET_H
 
 class mSocket {
-
-
-
 public:
-    mSocket();
-    mSocket(const mSocket& orig);
-    virtual ~mSocket();
-    
-    void send(string str, TCPSocket *sock);
-   
-   void c_buffer_str(char *charBuffer, int RCVBUFSIZE);
-    
-    string getInStr();
+	mSocket();
+	mSocket(const mSocket& orig);
+	virtual ~mSocket();
+
+	void send(string str, TCPSocket *sock);
+
+	void c_buffer_str(char *charBuffer, int RCVBUFSIZE);
+
+	string getInStr();
 private:
-    string str;
+	string str;
 };
 
 

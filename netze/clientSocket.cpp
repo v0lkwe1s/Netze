@@ -16,6 +16,7 @@ clientSocket::clientSocket(const clientSocket& orig) {
 clientSocket::~clientSocket() {
 }
 //this class needs implementation
+
 void clientSocket::setPort(int port) {
 
     this-> port = port;
@@ -97,20 +98,17 @@ void clientSocket::init() {
 
 }
 
-
 char* clientSocket::getSend() {
 
     return this -> msg;
 
 }
 
-
 int clientSocket::getPort() {
 
     return this->port;
 
 }
-
 
 string clientSocket::getAddress() {
 

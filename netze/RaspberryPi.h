@@ -15,20 +15,20 @@ using namespace std;
 
 class RaspberryPi {
 public:
-    
-    vector<Pin> getPins() const;
-    
-    void set();
-    
-    
-    RaspberryPi();
+
+	vector<Pin> getPins() const;
+
+	void set();
+
+
+	RaspberryPi();
 
 private:
-    strLib s;
-    vector<Pin> pins;
-    string pin;
-    string type;
-    string gpio;
+	strLib s;
+	vector<Pin> pins;
+	string pin;
+	string type;
+	string gpio;
 };
 
 #endif	/* RASPBERRYPI_H */

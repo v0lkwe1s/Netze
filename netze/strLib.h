@@ -27,20 +27,19 @@ using namespace std;
 #ifndef STRLIB_H
 #define	STRLIB_H
 
-
 class strLib {
 public:
-    strLib();
-    strLib(const strLib& orig);
-    virtual ~strLib();
-    
-    void sout(string str);
-    
-    void split(const string& s, char c, vector<string>& v);
-    
-    void newClient(TCPSocket *sock);
-    
-    string intToStr(int i);
+	strLib();
+	strLib(const strLib& orig);
+	virtual ~strLib();
+
+	void sout(string str);
+
+	void split(const string& s, char c, vector<string>& v);
+
+	void newClient(TCPSocket *sock);
+
+	string intToStr(int i);
 private:
 
 };

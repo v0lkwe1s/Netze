@@ -17,8 +17,9 @@ board::~board() {
 }
 
 //set board PinHeader
+
 void board::getBoard(string board) {
-    
+
     if (strcmp(board.c_str(), "hummingboard-i2ex") == 0) {
         hummingBoardI2Ex hummingBoard;
         hummingBoard.set();

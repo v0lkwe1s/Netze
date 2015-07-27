@@ -21,6 +21,7 @@ void strLib::sout(string str) {
 }
 
 //only print client properties, not necessary
+
 void strLib::newClient(TCPSocket* sock) {
     sout("New client! \n");
     sout("Ip Address: " + sock->getForeignAddress());
@@ -28,6 +29,7 @@ void strLib::newClient(TCPSocket* sock) {
 }
 
 //like vb.net split
+
 void strLib::split(const string& s, char c, vector<string>& v) {
     string::size_type i = 0;
     string::size_type j = s.find(c);
@@ -42,6 +44,7 @@ void strLib::split(const string& s, char c, vector<string>& v) {
 }
 
 //convert integer to string
+
 string strLib::intToStr(int i) {
     stringstream ss;
     ss << i;

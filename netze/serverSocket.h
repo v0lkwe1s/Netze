@@ -23,15 +23,13 @@ using namespace std;
 // Size of receive buffer 
 const int RCVBUFSIZE = 256;
 
-
 class serverSocket {
-
 public:
-    serverSocket();
-    
-    serverSocket(const serverSocket& orig);
-    
-    virtual ~serverSocket();
+	serverSocket();
+
+	serverSocket(const serverSocket& orig);
+
+	virtual ~serverSocket();
 
 	void error(const char *msg);
 
@@ -41,12 +39,12 @@ public:
 
 	void setPort(int port);
 
-	 int getPort();
+	int getPort();
 
 private:
-    int port;
-    strLib s;
-    mSocket ms;
+	int port;
+	strLib s;
+	mSocket ms;
 };
 
 #endif	/* NETWORKSOCKET_H */

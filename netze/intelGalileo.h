@@ -18,11 +18,11 @@ public:
 	intelGalileo(const intelGalileo& orig);
 	virtual ~intelGalileo();
 private:
-    strLib s;
-    vector<Pin> pins;
-    string pin;
-    string type;
-    string gpio;
+	strLib s;
+	vector<Pin> pins;
+	string pin;
+	string type;
+	string gpio;
 };
 
 #endif	/* INTELGALILEO_H */

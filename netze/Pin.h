@@ -11,21 +11,21 @@ using namespace std;
 
 class Pin {
 public:
-    
-    Pin(string nPin, string nGpio, string nType);
-    
-    string GetNGpio();
 
-    string GetNPin();
+	Pin(string nPin, string nGpio, string nType);
 
-    string GetNType();
+	string GetNGpio();
+
+	string GetNPin();
+
+	string GetNType();
 
 private:
-    
-    string nGpio;
-    string nPin;
-    string nType;
-    
+
+	string nGpio;
+	string nPin;
+	string nType;
+
 };
 
 #endif	/* PIN_H */

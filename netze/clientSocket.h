@@ -19,35 +19,39 @@
 
 using namespace std;
 
-
-
 class clientSocket {
 public:
-    clientSocket();
-    clientSocket(const clientSocket& orig);
-    virtual ~clientSocket();
-    
-    void init();
-    
-    void setPort(int port);
-    
-    int getPort();
-    
-    void setAddress(string address);
-    
-    string getAddress();
-    
-    void send(char *msg);
-    
-    char *getSend();
-    
-private:
-    
-    int port;
-    
-    string address;
+	clientSocket();
 
-    char *msg;
+	clientSocket(string address, char* msg, int port) :
+	address(address), msg(msg), port(port)
+	{
+	}
+
+	clientSocket(const clientSocket& orig);
+	virtual ~clientSocket();
+
+	void init();
+
+	void setPort(int port);
+
+	int getPort();
+
+	void setAddress(string address);
+
+	string getAddress();
+
+	void send(char *msg);
+
+	char *getSend();
+
+private:
+
+	int port;
+
+	string address;
+
+	char *msg;
 };
 
 #endif	/* CLIENTSOCKET_H */

@@ -16,6 +16,7 @@ mSocket::mSocket(const mSocket& orig) {
 mSocket::~mSocket() {
 }
 //convert char buffer to String
+
 void mSocket::c_buffer_str(char* charBuffer, int RCVBUFSIZE) {
     string c_str = "";
     for (int i = 2; i < RCVBUFSIZE; i++) {
@@ -25,6 +26,7 @@ void mSocket::c_buffer_str(char* charBuffer, int RCVBUFSIZE) {
 }
 
 //convert string to char buffer
+
 void mSocket::send(string str, TCPSocket* sock) {
     char *wbuff;
     wbuff = (char *) str.c_str();
@@ -32,7 +34,8 @@ void mSocket::send(string str, TCPSocket* sock) {
 }
 
 //get string passed of socket 
-string mSocket::getInStr() { 
+
+string mSocket::getInStr() {
     return this->str;
 }
 

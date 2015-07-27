@@ -35,13 +35,14 @@ OBJECTDIR=${CND_BUILDDIR}/${CND_CONF}/${CND_PLATFORM}
 
 # Object Files
 OBJECTFILES= \
-	${OBJECTDIR}/_ext/1147965664/Pin.o \
-	${OBJECTDIR}/_ext/1147965664/RaspberryPi.o \
-	${OBJECTDIR}/_ext/1147965664/intelGalileo.o \
+	${OBJECTDIR}/Makefile.o \
+	${OBJECTDIR}/Pin.o \
 	${OBJECTDIR}/PracticalSocket.o \
+	${OBJECTDIR}/RaspberryPi.o \
 	${OBJECTDIR}/board.o \
 	${OBJECTDIR}/clientSocket.o \
 	${OBJECTDIR}/hummingBoardI2Ex.o \
+	${OBJECTDIR}/intelGalileo.o \
 	${OBJECTDIR}/mSocket.o \
 	${OBJECTDIR}/main.o \
 	${OBJECTDIR}/serverSocket.o \
@@ -72,25 +73,25 @@ ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/netze: ${OBJECTFILES}
 	${MKDIR} -p ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}
 	${LINK.cc} -o ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/netze ${OBJECTFILES} ${LDLIBSOPTIONS}
 
-${OBJECTDIR}/_ext/1147965664/Pin.o: /home/Netze/netze/Pin.cpp 
-	${MKDIR} -p ${OBJECTDIR}/_ext/1147965664
+${OBJECTDIR}/Makefile.o: Makefile 
+	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
-	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/_ext/1147965664/Pin.o /home/Netze/netze/Pin.cpp
+	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Makefile.o Makefile
 
-${OBJECTDIR}/_ext/1147965664/RaspberryPi.o: /home/Netze/netze/RaspberryPi.cpp 
-	${MKDIR} -p ${OBJECTDIR}/_ext/1147965664
+${OBJECTDIR}/Pin.o: Pin.cpp 
+	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
-	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/_ext/1147965664/RaspberryPi.o /home/Netze/netze/RaspberryPi.cpp
-
-${OBJECTDIR}/_ext/1147965664/intelGalileo.o: /home/Netze/netze/intelGalileo.cpp 
-	${MKDIR} -p ${OBJECTDIR}/_ext/1147965664
-	${RM} "$@.d"
-	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/_ext/1147965664/intelGalileo.o /home/Netze/netze/intelGalileo.cpp
+	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Pin.o Pin.cpp
 
 ${OBJECTDIR}/PracticalSocket.o: PracticalSocket.cpp 
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
 	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/PracticalSocket.o PracticalSocket.cpp
+
+${OBJECTDIR}/RaspberryPi.o: RaspberryPi.cpp 
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/RaspberryPi.o RaspberryPi.cpp
 
 ${OBJECTDIR}/board.o: board.cpp 
 	${MKDIR} -p ${OBJECTDIR}
@@ -106,6 +107,11 @@ ${OBJECTDIR}/hummingBoardI2Ex.o: hummingBoardI2Ex.cpp
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
 	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/hummingBoardI2Ex.o hummingBoardI2Ex.cpp
+
+${OBJECTDIR}/intelGalileo.o: intelGalileo.cpp 
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/intelGalileo.o intelGalileo.cpp
 
 ${OBJECTDIR}/mSocket.o: mSocket.cpp 
 	${MKDIR} -p ${OBJECTDIR}

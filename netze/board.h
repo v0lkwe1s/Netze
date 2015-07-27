@@ -37,7 +37,7 @@ public:
 
 private:
 	vector<Pin> pins;
-	
+
 };
 
 #endif	/* BOARD_H */

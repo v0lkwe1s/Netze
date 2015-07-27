@@ -20,15 +20,11 @@ using namespace std;
  */
 
 int main(int argc, char** argv) {
-    
-    
     serverSocket s;
-    
+
     s.setPort(45455);
     s.init();
-    
-    
-    
+    s.~serverSocket();
     return 0;
 }
 
