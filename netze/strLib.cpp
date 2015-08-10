@@ -55,15 +55,14 @@ string strLib::intToStr(int i) {
 
 //Read file and assign text into string
 
-string strLib::getFileText(string file){
+string strLib::getFileText(string file) {
     string line;
-    ifstream myfile (file.c_str()); 
+    ifstream myfile(file.c_str());
     if (myfile.is_open()) {
-        while (! myfile.eof()) {
-            getline (myfile,line);
+        while (!myfile.eof()) {
+            getline(myfile, line);
         }
-    myfile.close();
-    }
-    else line = "Err"; 
-  return line;
+        myfile.close();
+    } else line = "Err";
+    return line;
 }
