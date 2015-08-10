@@ -4,12 +4,12 @@
  * and open the template in the editor.
  */
 package com.netzeapp.screens;
-
-import com.netzeapp.board.BoardPins;
 import com.netzeapp.socket.socketClient;
-import javax.swing.JLabel;
+import java.awt.Component;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.swing.JOptionPane;
-import javax.swing.JToggleButton;
+import javax.swing.JPanel;
 
 /**
  *
@@ -33,6 +33,12 @@ public class fMain extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jFrame1 = new javax.swing.JFrame();
+        jFrame2 = new javax.swing.JFrame();
+        jFrame3 = new javax.swing.JFrame();
+        jFrame4 = new javax.swing.JFrame();
+        jFrame5 = new javax.swing.JFrame();
+        jFrame6 = new javax.swing.JFrame();
         btnConnect = new javax.swing.JButton();
         tfHost = new javax.swing.JTextField();
         tfPort = new javax.swing.JTextField();
@@ -42,10 +48,78 @@ public class fMain extends javax.swing.JFrame {
         btSystem = new javax.swing.JButton();
         btGpio = new javax.swing.JButton();
         btGetHummingBoard = new javax.swing.JButton();
-        jLabel3 = new javax.swing.JLabel();
-        lbPortas = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
         btGetRaspberryPi = new javax.swing.JButton();
+        jButton2 = new javax.swing.JButton();
+        jButton3 = new javax.swing.JButton();
+        jp = new javax.swing.JPanel();
+        jButton4 = new javax.swing.JButton();
+
+        javax.swing.GroupLayout jFrame1Layout = new javax.swing.GroupLayout(jFrame1.getContentPane());
+        jFrame1.getContentPane().setLayout(jFrame1Layout);
+        jFrame1Layout.setHorizontalGroup(
+            jFrame1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 400, Short.MAX_VALUE)
+        );
+        jFrame1Layout.setVerticalGroup(
+            jFrame1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 300, Short.MAX_VALUE)
+        );
+
+        javax.swing.GroupLayout jFrame2Layout = new javax.swing.GroupLayout(jFrame2.getContentPane());
+        jFrame2.getContentPane().setLayout(jFrame2Layout);
+        jFrame2Layout.setHorizontalGroup(
+            jFrame2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 400, Short.MAX_VALUE)
+        );
+        jFrame2Layout.setVerticalGroup(
+            jFrame2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 300, Short.MAX_VALUE)
+        );
+
+        javax.swing.GroupLayout jFrame3Layout = new javax.swing.GroupLayout(jFrame3.getContentPane());
+        jFrame3.getContentPane().setLayout(jFrame3Layout);
+        jFrame3Layout.setHorizontalGroup(
+            jFrame3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 400, Short.MAX_VALUE)
+        );
+        jFrame3Layout.setVerticalGroup(
+            jFrame3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 300, Short.MAX_VALUE)
+        );
+
+        javax.swing.GroupLayout jFrame4Layout = new javax.swing.GroupLayout(jFrame4.getContentPane());
+        jFrame4.getContentPane().setLayout(jFrame4Layout);
+        jFrame4Layout.setHorizontalGroup(
+            jFrame4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 400, Short.MAX_VALUE)
+        );
+        jFrame4Layout.setVerticalGroup(
+            jFrame4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 300, Short.MAX_VALUE)
+        );
+
+        javax.swing.GroupLayout jFrame5Layout = new javax.swing.GroupLayout(jFrame5.getContentPane());
+        jFrame5.getContentPane().setLayout(jFrame5Layout);
+        jFrame5Layout.setHorizontalGroup(
+            jFrame5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 400, Short.MAX_VALUE)
+        );
+        jFrame5Layout.setVerticalGroup(
+            jFrame5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 300, Short.MAX_VALUE)
+        );
+
+        javax.swing.GroupLayout jFrame6Layout = new javax.swing.GroupLayout(jFrame6.getContentPane());
+        jFrame6.getContentPane().setLayout(jFrame6Layout);
+        jFrame6Layout.setHorizontalGroup(
+            jFrame6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 400, Short.MAX_VALUE)
+        );
+        jFrame6Layout.setVerticalGroup(
+            jFrame6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 300, Short.MAX_VALUE)
+        );
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -56,7 +130,7 @@ public class fMain extends javax.swing.JFrame {
             }
         });
 
-        tfHost.setText("127.0.0.1");
+        tfHost.setText("10.1.1.15");
 
         tfPort.setText("45455");
         tfPort.addActionListener(new java.awt.event.ActionListener() {
@@ -96,11 +170,7 @@ public class fMain extends javax.swing.JFrame {
             }
         });
 
-        jLabel3.setText("Portas");
-
-        lbPortas.setText("Selecione a placa!");
-
-        jButton1.setText("PerformAct Pin 7");
+        jButton1.setText("Pin 7 on");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
@@ -114,6 +184,38 @@ public class fMain extends javax.swing.JFrame {
             }
         });
 
+        jButton2.setText("Pin 7 off");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
+
+        jButton3.setText("Blink");
+        jButton3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton3ActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jpLayout = new javax.swing.GroupLayout(jp);
+        jp.setLayout(jpLayout);
+        jpLayout.setHorizontalGroup(
+            jpLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 600, Short.MAX_VALUE)
+        );
+        jpLayout.setVerticalGroup(
+            jpLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 600, Short.MAX_VALUE)
+        );
+
+        jButton4.setText("Ler estado do Pino 7");
+        jButton4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton4ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -121,7 +223,6 @@ public class fMain extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(btnConnect, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(tfComm)
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -133,18 +234,20 @@ public class fMain extends javax.swing.JFrame {
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(jLabel2)
                                     .addComponent(tfPort, javax.swing.GroupLayout.PREFERRED_SIZE, 59, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                            .addComponent(jLabel3)
-                            .addComponent(lbPortas))
-                        .addGap(0, 0, Short.MAX_VALUE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                            .addComponent(btGetRaspberryPi, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(btGetHummingBoard, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(btSystem, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 270, Short.MAX_VALUE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(btGpio, javax.swing.GroupLayout.DEFAULT_SIZE, 270, Short.MAX_VALUE)
-                            .addComponent(jButton1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                            .addGroup(layout.createSequentialGroup()
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(btGpio, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(jButton1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(jButton2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(jButton3, javax.swing.GroupLayout.DEFAULT_SIZE, 270, Short.MAX_VALUE)
+                                    .addComponent(btnConnect, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(btGetRaspberryPi, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(btGetHummingBoard, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(btSystem, javax.swing.GroupLayout.DEFAULT_SIZE, 270, Short.MAX_VALUE)
+                                    .addComponent(jButton4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(jp, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGap(0, 20, Short.MAX_VALUE)))
                 .addContainerGap())
         );
         layout.setVerticalGroup(
@@ -161,22 +264,27 @@ public class fMain extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(tfComm, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(btnConnect)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(btGpio)
-                    .addComponent(btSystem))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btGetHummingBoard)
-                    .addComponent(jButton1))
-                .addGap(10, 10, 10)
-                .addComponent(btGetRaspberryPi)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jLabel3)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(lbPortas)
-                .addContainerGap(233, Short.MAX_VALUE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(btnConnect)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(btSystem)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(btGetHummingBoard)
+                        .addGap(10, 10, 10)
+                        .addComponent(btGetRaspberryPi)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(btGpio)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jButton1)
+                        .addGap(10, 10, 10)
+                        .addComponent(jButton2)
+                        .addGap(7, 7, 7)
+                        .addComponent(jButton3)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jButton4))
+                    .addComponent(jp, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         pack();
@@ -208,23 +316,88 @@ public class fMain extends javax.swing.JFrame {
     }//GEN-LAST:event_btSystemActionPerformed
 
     private void btGetHummingBoardActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btGetHummingBoardActionPerformed
+        try {
         socketClient client = new socketClient(tfHost.getText(), Integer.valueOf(tfPort.getText()));
-        client.send("getBoard|hummingboard-i2ex");
+        
+        fRet f = new fRet();
+        f.setBounds(1, 1, 600, 600);
+        f.drawBtn("getBoard|hummingboard-i2ex", client);
+        f.setVisible(true);
+        f.show();
+        jp.add(f);
+        jp.revalidate();
+        jp.setVisible(true);
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+        }
+        
     }//GEN-LAST:event_btGetHummingBoardActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         socketClient client = new socketClient(tfHost.getText(), Integer.valueOf(tfPort.getText()));
-        client.send("performAct|out|7|1");
+        String str = client.send("performAct|out|7|1");
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void btGetRaspberryPiActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btGetRaspberryPiActionPerformed
+         try {
         socketClient client = new socketClient(tfHost.getText(), Integer.valueOf(tfPort.getText()));
-        client.send("getBoard|RaspberryPi");
+        
+        fRet f = new fRet();
+        f.setBounds(1, 1, 600, 600);
+        f.drawBtn("getBoard|RaspberryPi", client);
+        f.setVisible(true);
+        f.show();
+        jp.add(f);
+        jp.revalidate();
+        jp.setVisible(true);
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+        }
     }//GEN-LAST:event_btGetRaspberryPiActionPerformed
 
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        socketClient client = new socketClient(tfHost.getText(), Integer.valueOf(tfPort.getText()));
+        String str = client.send("performAct|out|7|0");
+    }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+        socketClient client = new socketClient(tfHost.getText(), Integer.valueOf(tfPort.getText()));
+        int i =0;
+        while (true) {
+                       
+            try {
+                String str = client.send("performAct|out|7|1");
+                Thread.sleep(200);
+            } catch (InterruptedException ex) {
+                Logger.getLogger(fMain.class.getName()).log(Level.SEVERE, null, ex);
+            }
+            
+            try {
+                String str =  client.send("performAct|out|7|0");
+                Thread.sleep(200);
+            } catch (InterruptedException ex) {
+                Logger.getLogger(fMain.class.getName()).log(Level.SEVERE, null, ex);
+            }
+            
+            i++;
+            System.out.println(i);
+        }
+    }//GEN-LAST:event_jButton3ActionPerformed
+
+    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
+        socketClient client = new socketClient(tfHost.getText(), Integer.valueOf(tfPort.getText()));
+        String state = client.send("getState|in|7");
+        JOptionPane.showMessageDialog(null, state);
+        
+    }//GEN-LAST:event_jButton4ActionPerformed
+
     /**
+     * @param ms
      * @param args the command line arguments
      */
+    
+ 
+    
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
@@ -253,14 +426,12 @@ public class fMain extends javax.swing.JFrame {
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 new fMain().setVisible(true);
+                
             }
         });
     }
-
-    public void setLbPortas(JLabel lbPortas) {
-        this.lbPortas = lbPortas;
-    }
-
+    
+    
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btGetHummingBoard;
     private javax.swing.JButton btGetRaspberryPi;
@@ -268,10 +439,18 @@ public class fMain extends javax.swing.JFrame {
     private javax.swing.JButton btSystem;
     private javax.swing.JButton btnConnect;
     private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton2;
+    private javax.swing.JButton jButton3;
+    private javax.swing.JButton jButton4;
+    private javax.swing.JFrame jFrame1;
+    private javax.swing.JFrame jFrame2;
+    private javax.swing.JFrame jFrame3;
+    private javax.swing.JFrame jFrame4;
+    private javax.swing.JFrame jFrame5;
+    private javax.swing.JFrame jFrame6;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel lbPortas;
+    private javax.swing.JPanel jp;
     private javax.swing.JTextField tfComm;
     private javax.swing.JTextField tfHost;
     private javax.swing.JTextField tfPort;

@@ -11,7 +11,7 @@ RaspberryPi::RaspberryPi() {
 }
 
 void RaspberryPi::set() {
-    for (int i = 1; i <= 26; i++) {
+    for (int i = 0; i <= 26; i++) {
         switch (i) {
             case 1:
                 type = "3.3V";

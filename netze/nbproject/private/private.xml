@@ -6,14 +6,16 @@
     </data>
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
-        <group>
-            <file>file:/home/Netze/netze/RaspberryPi.h</file>
-            <file>file:/home/Netze/netze/nbproject/configurations.xml</file>
+        <group name="Faculdade">
             <file>file:/home/Netze/netze/serverSocket.cpp</file>
-            <file>file:/home/Netze/netze/Makefile</file>
-            <file>file:/home/Netze/netze/Pin.h</file>
-            <file>file:/home/Netze/netze/nbproject/Makefile-Release.mk</file>
-            <file>file:/home/Netze/netze/PracticalSocket.h</file>
+            <file>file:/home/Netze/netze/main.cpp</file>
+        </group>
+        <group/>
+        <group name="Tcc">
+            <file>file:/home/Netze/Netze/netze/board.cpp</file>
+            <file>file:/home/Netze/Netze/netze/strLib.h</file>
+            <file>file:/home/Netze/Netze/netze/strLib.cpp</file>
+            <file>file:/home/Netze/Netze/netze/serverSocket.cpp</file>
         </group>
     </open-files>
 </project-private>

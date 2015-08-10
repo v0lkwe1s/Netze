@@ -6,7 +6,8 @@
  */
 
 #include "strLib.h"
-
+#include <iostream>
+#include <fstream>
 strLib::strLib() {
 }
 
@@ -50,4 +51,19 @@ string strLib::intToStr(int i) {
     ss << i;
     string str = ss.str();
     return str;
+}
+
+//Read file and assign text into string
+
+string strLib::getFileText(string file){
+    string line;
+    ifstream myfile (file.c_str()); 
+    if (myfile.is_open()) {
+        while (! myfile.eof()) {
+            getline (myfile,line);
+        }
+    myfile.close();
+    }
+    else line = "Err"; 
+  return line;
 }

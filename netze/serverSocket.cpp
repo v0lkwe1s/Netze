@@ -49,6 +49,7 @@ int serverSocket::getPort() {
 void serverSocket::error(const char* msg) {
     cout << msg << endl;
 }
+
 board b;
 
 void serverSocket::HandleTCPClient(TCPSocket* sock) {
@@ -72,7 +73,8 @@ void serverSocket::HandleTCPClient(TCPSocket* sock) {
             string resp = "HTTP/1.0 200 OK\r\n"
                     "Content-Type: text/html\r\n"
                     "Content-Length: 30\r\n\r\n"
-                    "<html><body>Nothing To Do Here! <br> Get out! </body></html>";
+                    "<html><body>Nothing To Do Here! <br>"
+                    " Get out! </body></html>";
             ms.send(resp, sock);
 
         } else if (pipe != -1) {
@@ -84,39 +86,29 @@ void serverSocket::HandleTCPClient(TCPSocket* sock) {
             if (strcmp(v[0].c_str(), "system") == 0) {
                 system(v[1].c_str());
             }
-            //gpio in first needs other parameter's to run
-            //gpio|enable-disable|pin|in-out
-            //v[1] enable-disable
-            //v[2] Pin number
-            //v[3] direction in-out
-            //this command make an export GPIO to use;
+            for (int i = 0; i < v.size(); i++) {
+                cout << v[i] << endl;
+            }
 
-            //TODO//
-            //create an option to send PinHeader to application//
             if (strcmp(v[0].c_str(), "getBoard") == 0) {
-                b.getBoard(v[1].c_str());
+                b.getBoard(v[1].c_str()); //debug - 
                 vector<Pin> pins;
                 pins = b.getPins();
+                string portMap;
+                //JSON port Map
+                portMap = "{PinHeader :[";
                 for (int i = 1; i < pins.size(); i++) {
-                    string portMap;
-                    portMap = ":" + pins[i].GetNType() + "|" + pins[i].GetNPin() + "|" + pins[i].GetNGpio();
-                    ms.send(portMap, sock);
+                     portMap+= "{\"type\":\"" +pins[i].GetNType() + "\",\"pin\":\"" + pins[i].GetNPin() + "\",\"gpio\":\"" + pins[i].GetNGpio() + "\"},";
                 }
+                portMap+= "]}";
+                ms.send(portMap, sock);
             } else if (strcmp(v[0].c_str(), "gpio") == 0) {
                 if (v.size() >= 4) {
                     if ((strcmp(v[1].c_str(), "enable") == 0) && ((strcmp(v[3].c_str(), "in") == 0) || (strcmp(v[3].c_str(), "out") == 0))) {
                         ms.send("Done", sock);
                     }
                 }
-            }//TODO
-                //send reads of pins
-
-                //this block is for perform actuation in pin's
-                //need these parameter's
-                //v[0] - performAct
-                //v[1] - direction
-                //v[2] - pin
-                //v[3] - value
+            } 
             else if (strcmp(v[0].c_str(), "performAct") == 0) {
                 if (b.getPins().empty()) {
                     ms.send("Board Not Defined", sock);
@@ -134,19 +126,41 @@ void serverSocket::HandleTCPClient(TCPSocket* sock) {
                             if (strcmp(v[2].c_str(), pins[i].GetNPin().c_str()) == 0)
                                 gpio = pins[i].GetNGpio();
                         }
-                        string sysReq = "echo \"out\" > /sys/class/gpio/gpio" + gpio + "/direction";
+                        string sysReq = "echo out > /sys/class/gpio/gpio" + gpio + "/direction";
                         cout << sysReq << endl;
                         system(sysReq.c_str());
                         //echo 1 > /sys/class/gpio/gpio4/value
-                        sysReq = "echo " + v[3] + " /sys/class/gpio/gpio" + gpio + "/value";
+                        sysReq = "echo " + v[3] + " > /sys/class/gpio/gpio" + gpio + "/value";
                         cout << sysReq << endl;
                         system(sysReq.c_str());
-                        ms.send("Act Performed", sock);
                     }
                 }
             }
-
-
+            
+            else if (strcmp(v[0].c_str(), "getState") == 0) {
+                if (b.getPins().empty()) {
+                    ms.send("Board Not Defined", sock);
+                    for (int i = 0; i < v.size(); i++) {
+                        v.pop_back();
+                    }
+                }
+                if (v.size() >= 3) {
+                    string gpio;
+                    if (strcmp(v[1].c_str(), "in") == 0) {
+                        vector<Pin> pins;
+                        pins = b.getPins();
+                        //Translate pinNumber to Gpio Number
+                        for (int i = 0; i < pins.size(); i++) {
+                            if (strcmp(v[2].c_str(), pins[i].GetNPin().c_str()) == 0)
+                                gpio = pins[i].GetNGpio();
+                        }
+                        
+                        ms.send(s.getFileText("/sys/class/gpio/gpio" + gpio + "/value"), sock);
+                        ms.send("teste", sock);
+                    }
+                }
+            }
+            
         } else {
             ms.send("Command not reconized!", sock);
         }

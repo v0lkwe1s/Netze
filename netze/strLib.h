@@ -40,6 +40,8 @@ public:
 	void newClient(TCPSocket *sock);
 
 	string intToStr(int i);
+	string getFileText(string file);
+	
 private:
 
 };
