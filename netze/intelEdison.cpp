@@ -1,37 +1,41 @@
 /* 
- * File:   intelGalileo.cpp
+ * File:   intelEdison.cpp
  * Author: williamvolkweis
  * 
- * Created on July 19, 2015, 5:30 PM
+ * Created on August 15, 2015, 8:18 PM
  */
 
-#include "intelGalileo.h"
+#include "intelEdison.h"
 
-intelGalileo::intelGalileo() {
+intelEdison::intelEdison() {
 }
 
-intelGalileo::intelGalileo(const intelGalileo& orig) {
+intelEdison::intelEdison(const intelEdison& orig) {
 }
 
-intelGalileo::~intelGalileo() {
+intelEdison::~intelEdison() {
 }
 
-void intelGalileo::set() {
+vector<Pin> intelEdison::getPins() const {
+    return pins;
 
+}
+
+void intelEdison::set() {
     for (int i = 0; i <= 26; i++) {
         switch (i) {
             case 1:
-                type = "3.3V";
+                type = "null";
                 gpio = "0";
                 pin = s.intToStr(i);
                 break;
             case 2:
-                type = "5V";
+                type = "null";
                 gpio = "0";
                 pin = s.intToStr(i);
                 break;
             case 3:
-                type = "I2C";
+                type = "null";
                 gpio = "0";
                 pin = s.intToStr(i);
                 break;
@@ -155,6 +159,4 @@ void intelGalileo::set() {
     }
 }
 
-vector<Pin> intelGalileo::getPins() const {
-    return pins;
-}
+

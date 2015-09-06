@@ -11,10 +11,13 @@
             <file>file:/home/Netze/netze/main.cpp</file>
         </group>
         <group/>
+        <group name="Salute"/>
         <group name="Tcc">
-            <file>file:/home/Netze/Netze/netze/board.cpp</file>
-            <file>file:/home/Netze/Netze/netze/strLib.h</file>
-            <file>file:/home/Netze/Netze/netze/strLib.cpp</file>
+            <file>file:/home/Netze/Netze/netze/main.cpp</file>
+            <file>file:/home/Netze/Netze/netze/intelEdison.cpp</file>
+            <file>file:/home/Netze/Netze/netze/nbproject/Makefile-Release.mk</file>
+            <file>file:/home/Netze/Netze/netze/Pin.h</file>
+            <file>file:/home/Netze/Netze/netze/intelEdison.h</file>
             <file>file:/home/Netze/Netze/netze/serverSocket.cpp</file>
         </group>
     </open-files>

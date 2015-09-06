@@ -35,6 +35,7 @@ OBJECTDIR=${CND_BUILDDIR}/${CND_CONF}/${CND_PLATFORM}
 
 # Object Files
 OBJECTFILES= \
+	${OBJECTDIR}/_ext/1415132743/intelEdison.o \
 	${OBJECTDIR}/Makefile.o \
 	${OBJECTDIR}/Pin.o \
 	${OBJECTDIR}/PracticalSocket.o \
@@ -72,6 +73,11 @@ LDLIBSOPTIONS=
 ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/netze: ${OBJECTFILES}
 	${MKDIR} -p ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}
 	${LINK.cc} -o ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/netze ${OBJECTFILES} ${LDLIBSOPTIONS}
+
+${OBJECTDIR}/_ext/1415132743/intelEdison.o: /home/Netze/Netze/netze/intelEdison.cpp 
+	${MKDIR} -p ${OBJECTDIR}/_ext/1415132743
+	${RM} "$@.d"
+	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/_ext/1415132743/intelEdison.o /home/Netze/Netze/netze/intelEdison.cpp
 
 ${OBJECTDIR}/Makefile.o: Makefile 
 	${MKDIR} -p ${OBJECTDIR}

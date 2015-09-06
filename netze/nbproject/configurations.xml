@@ -10,6 +10,7 @@
       <itemPath>board.h</itemPath>
       <itemPath>clientSocket.h</itemPath>
       <itemPath>hummingBoardI2Ex.h</itemPath>
+      <itemPath>/home/Netze/Netze/netze/intelEdison.h</itemPath>
       <itemPath>intelGalileo.h</itemPath>
       <itemPath>mSocket.h</itemPath>
       <itemPath>serverSocket.h</itemPath>
@@ -28,6 +29,7 @@
       <itemPath>board.cpp</itemPath>
       <itemPath>clientSocket.cpp</itemPath>
       <itemPath>hummingBoardI2Ex.cpp</itemPath>
+      <itemPath>/home/Netze/Netze/netze/intelEdison.cpp</itemPath>
       <itemPath>intelGalileo.cpp</itemPath>
       <itemPath>mSocket.cpp</itemPath>
       <itemPath>main.cpp</itemPath>
@@ -46,6 +48,9 @@
     </logicalFolder>
     <itemPath>Makefile</itemPath>
   </logicalFolder>
+  <sourceRootList>
+    <Elem>/home/Netze/Netze/Modules</Elem>
+  </sourceRootList>
   <projectmakefile>Makefile</projectmakefile>
   <confs>
     <conf name="Debug" type="1">
@@ -55,7 +60,22 @@
         <rebuildPropChanged>false</rebuildPropChanged>
       </toolsSet>
       <compileType>
+        <ccTool>
+          <incDir>
+            <pElem>.</pElem>
+          </incDir>
+        </ccTool>
       </compileType>
+      <item path="/home/Netze/Netze/netze/intelEdison.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="/home/Netze/Netze/netze/intelEdison.h"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
       <item path="Makefile" ex="false" tool="3" flavor2="0">
       </item>
       <item path="Pin.cpp" ex="false" tool="1" flavor2="0">
@@ -121,6 +141,16 @@
           <developmentMode>5</developmentMode>
         </asmTool>
       </compileType>
+      <item path="/home/Netze/Netze/netze/intelEdison.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="/home/Netze/Netze/netze/intelEdison.h"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
       <item path="Makefile" ex="false" tool="1" flavor2="0">
       </item>
       <item path="Pin.cpp" ex="false" tool="1" flavor2="0">
