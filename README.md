@@ -8,16 +8,14 @@ TODO LIST
   1.2 - Define port to connect  -         ok
   1.3 - Pass and receive params to embedded board - ok 
   
-
 2 - Create server Client --> Not for now 
   
 3 - access Gpios 
   3.1 - Define board with tests, maybe using proper GPIO, read the value, and assign board. -- in implementation
     
-
-4 - Perform actuations in Gpio's pin's
-5 - Read Values from Gpio pin
+4 - Perform actuations in Gpio's pin's -- ok (Functions in NetzeApp)
+5 - Read Values from Gpio pin -- ok (pin 7 with readerFile function)
 6 - Learning English ^^
-7 - Threads process
+7 - Threads process -- not for now
 
 
