@@ -1,0 +1,294 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configurationDescriptor version="95">
+  <logicalFolder name="root" displayName="root" projectFiles="true" kind="ROOT">
+    <logicalFolder name="HeaderFiles"
+                   displayName="Header Files"
+                   projectFiles="true">
+    </logicalFolder>
+    <logicalFolder name="ResourceFiles"
+                   displayName="Resource Files"
+                   projectFiles="true">
+    </logicalFolder>
+    <logicalFolder name="SourceFiles"
+                   displayName="Source Files"
+                   projectFiles="true">
+      <logicalFolder name="Extras" displayName="Extras" projectFiles="true">
+        <itemPath>Extras/QuantumHomer.cpp</itemPath>
+        <itemPath>Extras/QuantumHomer.h</itemPath>
+        <itemPath>Extras/SpiArduino.ino</itemPath>
+      </logicalFolder>
+      <logicalFolder name="Libraries" displayName="Libraries" projectFiles="true">
+        <itemPath>Libraries/LibJson.cpp</itemPath>
+        <itemPath>Libraries/LibJson.h</itemPath>
+        <itemPath>Libraries/LibSocket.cpp</itemPath>
+        <itemPath>Libraries/LibSocket.h</itemPath>
+        <itemPath>Libraries/LibSpi.cpp</itemPath>
+        <itemPath>Libraries/LibSpi.h</itemPath>
+        <itemPath>Libraries/LibStr.cpp</itemPath>
+        <itemPath>Libraries/LibStr.h</itemPath>
+      </logicalFolder>
+      <logicalFolder name="Model" displayName="Model" projectFiles="true">
+        <itemPath>Model/Board.cpp</itemPath>
+        <itemPath>Model/Board.h</itemPath>
+        <itemPath>Model/HummingBoardI2Ex.cpp</itemPath>
+        <itemPath>Model/HummingBoardI2Ex.h</itemPath>
+        <itemPath>Model/IntelEdison.cpp</itemPath>
+        <itemPath>Model/IntelEdison.h</itemPath>
+        <itemPath>Model/IntelGalileo.cpp</itemPath>
+        <itemPath>Model/IntelGalileo.h</itemPath>
+        <itemPath>Model/Pin.cpp</itemPath>
+        <itemPath>Model/Pin.h</itemPath>
+        <itemPath>Model/RaspberryPi.cpp</itemPath>
+        <itemPath>Model/RaspberryPi.h</itemPath>
+        <itemPath>Model/jsonObject.cpp</itemPath>
+        <itemPath>Model/jsonObject.h</itemPath>
+      </logicalFolder>
+      <logicalFolder name="Modules" displayName="Modules" projectFiles="true">
+        <itemPath>Modules/ArduinoADC.cpp</itemPath>
+        <itemPath>Modules/ArduinoADC.h</itemPath>
+        <itemPath>Modules/ArduinoUltraSonic.cpp</itemPath>
+        <itemPath>Modules/ArduinoUltraSonic.h</itemPath>
+        <itemPath>Modules/Blink.cpp</itemPath>
+        <itemPath>Modules/Blink.h</itemPath>
+        <itemPath>Extras/Spi.cpp</itemPath>
+        <itemPath>Extras/Spi.h</itemPath>
+      </logicalFolder>
+      <logicalFolder name="Socket" displayName="Socket" projectFiles="true">
+        <itemPath>Socket/PracticalSocket.cpp</itemPath>
+        <itemPath>Socket/PracticalSocket.h</itemPath>
+        <itemPath>Socket/ServerSocket.cpp</itemPath>
+        <itemPath>Socket/ServerSocket.h</itemPath>
+        <itemPath>Socket/clientSocket.cpp</itemPath>
+        <itemPath>Socket/clientSocket.h</itemPath>
+      </logicalFolder>
+      <itemPath>main.cpp</itemPath>
+    </logicalFolder>
+    <logicalFolder name="TestFiles"
+                   displayName="Test Files"
+                   projectFiles="false"
+                   kind="TEST_LOGICAL_FOLDER">
+    </logicalFolder>
+    <logicalFolder name="ExternalFiles"
+                   displayName="Important Files"
+                   projectFiles="false"
+                   kind="IMPORTANT_FILES_FOLDER">
+    </logicalFolder>
+    <itemPath>Makefile</itemPath>
+    <itemPath>newComplexMakefile</itemPath>
+  </logicalFolder>
+  <sourceRootList>
+    <Elem>Extras</Elem>
+    <Elem>Libraries</Elem>
+    <Elem>Model</Elem>
+    <Elem>Modules</Elem>
+    <Elem>Socket</Elem>
+  </sourceRootList>
+  <projectmakefile>Makefile</projectmakefile>
+  <confs>
+    <conf name="Debug" type="1">
+      <toolsSet>
+        <compilerSet>default</compilerSet>
+        <dependencyChecking>true</dependencyChecking>
+        <rebuildPropChanged>false</rebuildPropChanged>
+      </toolsSet>
+      <compileType>
+        <linkerTool>
+          <linkerLibItems>
+            <linkerLibStdlibItem>Curses</linkerLibStdlibItem>
+            <linkerLibStdlibItem>PosixThreads</linkerLibStdlibItem>
+          </linkerLibItems>
+          <commandLine>--sdt=c++11</commandLine>
+        </linkerTool>
+      </compileType>
+      <item path="Extras/QuantumHomer.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Extras/QuantumHomer.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Extras/Spi.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Extras/Spi.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Extras/SpiArduino.ino" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Libraries/LibJson.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Libraries/LibJson.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Libraries/LibSocket.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Libraries/LibSocket.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Libraries/LibSpi.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Libraries/LibSpi.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Libraries/LibStr.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Libraries/LibStr.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Makefile" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Model/Board.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Model/Board.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Model/HummingBoardI2Ex.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Model/HummingBoardI2Ex.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Model/IntelEdison.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Model/IntelEdison.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Model/IntelGalileo.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Model/IntelGalileo.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Model/Pin.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Model/Pin.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Model/RaspberryPi.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Model/RaspberryPi.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Model/jsonObject.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Model/jsonObject.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Modules/ArduinoADC.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Modules/ArduinoADC.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Modules/ArduinoUltraSonic.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Modules/ArduinoUltraSonic.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Modules/Blink.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Modules/Blink.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Socket/PracticalSocket.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Socket/PracticalSocket.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Socket/ServerSocket.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Socket/ServerSocket.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Socket/clientSocket.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Socket/clientSocket.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="main.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="newComplexMakefile" ex="false" tool="3" flavor2="0">
+      </item>
+    </conf>
+    <conf name="Release" type="1">
+      <toolsSet>
+        <compilerSet>default</compilerSet>
+        <dependencyChecking>true</dependencyChecking>
+        <rebuildPropChanged>false</rebuildPropChanged>
+      </toolsSet>
+      <compileType>
+        <cTool>
+          <developmentMode>5</developmentMode>
+        </cTool>
+        <ccTool>
+          <developmentMode>5</developmentMode>
+        </ccTool>
+        <fortranCompilerTool>
+          <developmentMode>5</developmentMode>
+        </fortranCompilerTool>
+        <asmTool>
+          <developmentMode>5</developmentMode>
+        </asmTool>
+      </compileType>
+      <item path="Extras/QuantumHomer.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Extras/QuantumHomer.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Extras/Spi.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Extras/Spi.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Extras/SpiArduino.ino" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Libraries/LibJson.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Libraries/LibJson.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Libraries/LibSocket.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Libraries/LibSocket.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Libraries/LibSpi.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Libraries/LibSpi.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Libraries/LibStr.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Libraries/LibStr.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Makefile" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Model/Board.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Model/Board.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Model/HummingBoardI2Ex.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Model/HummingBoardI2Ex.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Model/IntelEdison.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Model/IntelEdison.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Model/IntelGalileo.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Model/IntelGalileo.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Model/Pin.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Model/Pin.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Model/RaspberryPi.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Model/RaspberryPi.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Model/jsonObject.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Model/jsonObject.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Modules/ArduinoADC.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Modules/ArduinoADC.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Modules/ArduinoUltraSonic.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Modules/ArduinoUltraSonic.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Modules/Blink.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Modules/Blink.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Socket/PracticalSocket.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Socket/PracticalSocket.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Socket/ServerSocket.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Socket/ServerSocket.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Socket/clientSocket.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Socket/clientSocket.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="main.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="newComplexMakefile" ex="false" tool="3" flavor2="0">
+      </item>
+    </conf>
+  </confs>
+</configurationDescriptor>

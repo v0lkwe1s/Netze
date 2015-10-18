@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-private xmlns="http://www.netbeans.org/ns/project-private/1">
+    <data xmlns="http://www.netbeans.org/ns/make-project-private/1">
+        <activeConfTypeElem>1</activeConfTypeElem>
+        <activeConfIndexElem>0</activeConfIndexElem>
+    </data>
+    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
+    <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
+        <group name="Tcc">
+            <file>file:/home/Faculdade/Tcc/cNet/Socket/ServerSocket.h</file>
+            <file>file:/home/Faculdade/Tcc/cNet/main.cpp</file>
+            <file>file:/home/Faculdade/Tcc/cNet/Socket/ServerSocket.cpp</file>
+            <file>file:/home/Faculdade/Tcc/cNet/Model/Board.cpp</file>
+            <file>file:/home/Faculdade/Tcc/cNet/Socket/clientSocket.cpp</file>
+            <file>file:/home/Faculdade/Tcc/cNet/Socket/PracticalSocket.cpp</file>
+        </group>
+        <group>
+            <file>file:/home/Faculdade/Tcc/cNet/Socket/ServerSocket.h</file>
+            <file>file:/home/Faculdade/Tcc/cNet/Libraries/LibSpi.cpp</file>
+            <file>file:/home/Faculdade/Tcc/cNet/Makefile</file>
+            <file>file:/home/Faculdade/Tcc/cNet/Libraries/LibJson.h</file>
+            <file>file:/home/Faculdade/Tcc/cNet/Model/RaspberryPi.cpp</file>
+            <file>file:/home/Faculdade/Tcc/cNet/Model/Pin.cpp</file>
+            <file>file:/home/Faculdade/Tcc/cNet/Libraries/LibStr.cpp</file>
+            <file>file:/home/Faculdade/Tcc/cNet/Model/jsonObject.cpp</file>
+            <file>file:/home/Faculdade/Tcc/cNet/Extras/QuantumHomer.cpp</file>
+            <file>file:/home/Faculdade/Tcc/cNet/Libraries/LibSpi.h</file>
+            <file>file:/home/Faculdade/Tcc/cNet/Libraries/LibSocket.h</file>
+            <file>file:/home/Faculdade/Tcc/cNet/Libraries/LibSocket.cpp</file>
+            <file>file:/home/Faculdade/Tcc/cNet/Libraries/LibStr.h</file>
+            <file>file:/home/Faculdade/Tcc/cNet/Socket/ServerSocket.cpp</file>
+            <file>file:/home/Faculdade/Tcc/cNet/Model/Board.cpp</file>
+            <file>file:/home/Faculdade/Tcc/cNet/Model/HummingBoardI2Ex.cpp</file>
+            <file>file:/home/Faculdade/Tcc/cNet/Extras/QuantumHomer.h</file>
+            <file>file:/home/Faculdade/Tcc/cNet/Model/RaspberryPi.h</file>
+            <file>file:/home/Faculdade/Tcc/cNet/Libraries/LibJson.cpp</file>
+        </group>
+    </open-files>
+</project-private>
